@@ -64,46 +64,54 @@ export default function Home() {
   };
 
   return (
-    <main className="desk-shell min-h-screen overflow-hidden px-4 py-8 text-[var(--foreground)] sm:px-6 lg:px-8">
-      <div className="mist-orb -left-12 top-10 h-44 w-44 bg-[#d9e8dc]" />
-      <div className="mist-orb right-0 top-28 h-56 w-56 bg-[#e9f0ea]" />
-      <div className="mist-orb bottom-10 left-1/3 h-40 w-40 bg-[#dfe9df]" />
+    <main className="desk-shell min-h-screen px-4 py-8 text-[var(--foreground)] sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="mist-orb mist-orb-1 left-0 top-12 h-64 w-64 -translate-x-1/4" />
+        <div className="mist-orb mist-orb-2 right-0 top-1/4 h-80 w-80 translate-x-1/4" />
+        <div className="mist-orb mist-orb-3 bottom-0 left-1/3 h-72 w-72" />
+      </div>
 
-      <div className="mx-auto flex w-full max-w-5xl items-start pt-6 sm:pt-8 lg:min-h-[calc(100vh-4rem)] lg:items-center lg:pt-0">
-        <section className="paper-panel grid w-full gap-8 rounded-[2rem] p-6 sm:p-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-10 lg:p-10">
-          <div className="flex flex-col justify-between gap-8">
-            <div className="space-y-5">
-              <p className="eyebrow text-xs font-medium">Quiet citation workspace</p>
-              <div className="space-y-4">
-                <h1 className="editorial-title text-4xl leading-tight font-medium text-[var(--foreground)] sm:text-5xl">
+      <div className="mx-auto flex w-full max-w-[96rem] items-start justify-center py-6 sm:py-10 md:py-12 lg:py-14 xl:py-16 2xl:py-20">
+        <section className="animate-slide-up grid w-full items-start gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(22rem,36rem)] lg:gap-12 xl:grid-cols-[minmax(0,1.08fr)_minmax(26rem,38rem)] xl:gap-16 2xl:grid-cols-[minmax(0,1.16fr)_minmax(28rem,40rem)]">
+          <div className="flex min-w-0 flex-col gap-10 xl:gap-12">
+            <header className="hero-shell space-y-8 rounded-[2.5rem] px-6 py-7 sm:px-8 sm:py-9 xl:px-10 xl:py-10">
+              <div className="space-y-5">
+                <p className="eyebrow text-xs">Quiet citation workspace</p>
+                <h1 className="editorial-title max-w-[12ch] text-[clamp(3rem,5.2vw,6.2rem)] font-medium leading-[0.94]">
                   Free ASME Citation Generator
                 </h1>
-                <p className="max-w-xl text-[15px] leading-7 text-[var(--text-muted)] sm:text-base">
-                  Turn a verified paper link into an editable ASME citation without
-                  staring at a harsh tool interface. Built for DOI, arXiv, IEEE, and
-                  Springer paper pages.
-                </p>
               </div>
-            </div>
+              <p className="max-w-[34rem] text-[16px] leading-[1.72] text-[var(--text-muted)] sm:text-[17px] xl:max-w-[38rem]">
+                Turn a verified paper link into an editable ASME citation without
+                staring at a harsh tool interface. Built for DOI, arXiv, IEEE, and
+                Springer paper pages.
+              </p>
+            </header>
 
-            <div className="paper-well rounded-[1.5rem] p-5 sm:p-6">
-              <div className="flex items-start justify-between gap-4">
+            <div className="support-band space-y-5 rounded-[2rem] px-6 py-6 sm:px-8 sm:py-7 xl:px-9">
+              <div className="flex flex-wrap items-center justify-between gap-3">
                 <div>
-                  <p className="text-sm font-semibold text-[var(--foreground)]">
+                  <p className="text-[15px] font-bold text-[var(--foreground)]">
                     Supported link types
                   </p>
-                  <p className="mt-2 text-sm leading-6 text-[var(--text-muted)]">
-                    Use a direct paper page from <span className="font-semibold">DOI</span>,{" "}
-                    <span className="font-semibold">arXiv</span>,{" "}
-                    <span className="font-semibold">IEEE</span>, or{" "}
-                    <span className="font-semibold">Springer</span>.
+                  <p className="mt-2 max-w-[42rem] text-[14px] leading-relaxed text-[var(--text-muted)]">
+                    Use a direct paper page from <span className="font-semibold text-[var(--foreground)]">DOI</span>,{" "}
+                    <span className="font-semibold text-[var(--foreground)]">arXiv</span>,{" "}
+                    <span className="font-semibold text-[var(--foreground)]">IEEE</span>, or{" "}
+                    <span className="font-semibold text-[var(--foreground)]">Springer</span>.
                   </p>
                 </div>
-                <div className="result-chip rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--text-soft)]">
+                <div className="result-chip rounded-full px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em]">
                   Verified
                 </div>
               </div>
-              <p className="mt-3 text-sm leading-6 text-[var(--text-soft)]">
+              <div className="source-strip flex flex-wrap gap-2.5">
+                <span className="source-pill">DOI</span>
+                <span className="source-pill">arXiv</span>
+                <span className="source-pill">IEEE</span>
+                <span className="source-pill">Springer</span>
+              </div>
+              <p className="max-w-[46rem] border-t border-[var(--line-soft)] pt-4 text-[13px] leading-relaxed text-[var(--text-soft)]">
                 Avoid search results, author profile pages, publisher homepages, or
                 generic landing pages. This tool is narrow on purpose so the result
                 stays trustworthy.
@@ -111,110 +119,129 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-5">
-            <div className="paper-well rounded-[1.5rem] p-5 sm:p-6">
-              <div className="mb-4">
-                <p className="eyebrow text-[11px] font-semibold">Input</p>
-                <h2 className="mt-2 text-lg font-semibold text-[var(--foreground)]">
-                  Start with one paper URL
-                </h2>
-              </div>
-
-              <div className="space-y-4">
-                <label className="block text-sm font-medium text-[var(--foreground)]">
-                  Paper URL
-                </label>
-                <div className="field-shell rounded-2xl px-4 py-3 transition-all">
-                  <input
-                    type="url"
-                    className="w-full bg-transparent text-[15px] outline-none placeholder:text-[var(--text-soft)]"
-                    placeholder="https://doi.org/... or https://arxiv.org/abs/..."
-                    value={url}
-                    onChange={(e) => setUrl(e.target.value)}
-                    onKeyDown={(e) => e.key === "Enter" && generateCitation()}
-                  />
+          <aside className="lg:sticky lg:top-8 xl:top-10">
+            <div className="workbench-panel rounded-[2.1rem] p-6 sm:p-8 xl:p-9">
+              <div className="space-y-7">
+                <div className="space-y-3">
+                  <p className="eyebrow text-[11px]">Input</p>
+                  <h2 className="text-[22px] font-bold tracking-tight text-[var(--foreground)]">
+                    Start with one paper URL
+                  </h2>
+                  <p className="text-[14px] leading-relaxed text-[var(--text-muted)]">
+                    Paste the paper page you would actually cite. The tool reads its
+                    metadata, formats a draft, and leaves the final wording editable.
+                  </p>
                 </div>
 
-                <div className="support-note rounded-2xl px-4 py-3 text-sm leading-6 text-[var(--text-muted)]">
-                  Paste the paper page you would actually cite. The tool reads its
-                  metadata, formats a draft, and leaves the final wording editable.
-                </div>
-
-                <button
-                  onClick={generateCitation}
-                  disabled={loading || !url}
-                  className="quiet-button w-full rounded-2xl px-5 py-3.5 text-sm font-semibold tracking-[0.01em] transition-all disabled:cursor-not-allowed disabled:opacity-55"
-                >
-                  {loading ? "Generating citation..." : "Generate ASME Citation"}
-                </button>
-              </div>
-            </div>
-
-            {error && (
-              <div className="error-soft rounded-[1.5rem] px-5 py-4 text-sm">
-                <p className="font-semibold">{error.title}</p>
-                <p className="mt-1 leading-6 opacity-90">{error.detail}</p>
-                {error.tip && <p className="mt-3 leading-6 opacity-80">{error.tip}</p>}
-              </div>
-            )}
-
-            {!error && !loading && !hasResult && (
-              <div className="status-soft rounded-[1.5rem] px-5 py-5 text-sm text-[var(--text-muted)]">
-                <p className="font-semibold text-[var(--foreground)]">Ready when you are</p>
-                <p className="mt-2 leading-6">
-                  Paste one supported paper URL and generate an editable citation draft.
-                </p>
-                <p className="mt-2 leading-6 text-[var(--text-soft)]">
-                  Best results come from direct DOI, arXiv, IEEE, or Springer article pages.
-                </p>
-              </div>
-            )}
-
-            {!error && loading && (
-              <div className="status-soft rounded-[1.5rem] px-5 py-5 text-sm text-[var(--text-muted)]">
-                <p className="font-semibold text-[var(--foreground)]">Generating citation...</p>
-                <p className="mt-2 leading-6">
-                  Reading the paper metadata and formatting an ASME citation draft.
-                </p>
-              </div>
-            )}
-
-            {citation && !loading && (
-              <div className="citation-sheet rounded-[1.7rem] p-5 sm:p-6">
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <p className="eyebrow text-[11px] font-semibold">Citation ready</p>
-                    <p className="mt-2 text-sm leading-6 text-[var(--text-muted)]">
-                      Review the draft, adjust anything you need, then copy the final
-                      version into your references.
-                    </p>
+                <div className="space-y-5">
+                  <div className="space-y-2.5">
+                    <label className="block text-[14px] font-semibold text-[var(--foreground)] ml-1">
+                      Paper URL
+                    </label>
+                    <div className="field-shell rounded-2xl px-4 py-3.5">
+                      <input
+                        type="url"
+                        className="w-full bg-transparent text-[15px] outline-none placeholder:text-[var(--text-soft)] font-medium"
+                        placeholder="https://doi.org/... or https://arxiv.org/abs/..."
+                        value={url}
+                        onChange={(e) => setUrl(e.target.value)}
+                        onKeyDown={(e) => e.key === "Enter" && generateCitation()}
+                      />
+                    </div>
                   </div>
-                  {sourceType && (
-                    <span className="result-chip rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--text-soft)]">
-                      {sourceType}
-                    </span>
-                  )}
-                </div>
 
-                <div className="mt-5 rounded-[1.4rem] bg-white/45 px-4 py-4">
-                  <textarea
-                    value={citation}
-                    onChange={(e) => setCitation(e.target.value)}
-                    className="paper-textarea min-h-[168px] w-full resize-none bg-transparent font-mono text-[13px] leading-8"
-                  />
-                </div>
-
-                <div className="mt-4 flex justify-end">
                   <button
-                    onClick={handleCopy}
-                    className="subtle-action rounded-full px-4 py-2 text-xs font-semibold tracking-[0.04em] text-[var(--foreground)] transition-colors"
+                    onClick={generateCitation}
+                    disabled={loading || !url}
+                    className="quiet-button w-full rounded-2xl px-6 py-4 text-[15px] font-bold tracking-wide"
                   >
-                    {copied ? "Copied!" : "Copy citation"}
+                    {loading ? (
+                      <span className="flex items-center justify-center gap-2">
+                        <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Generating...
+                      </span>
+                    ) : "Generate ASME Citation"}
                   </button>
                 </div>
+
+                <div className="workbench-divider" />
+
+                {error && (
+                  <div className="error-soft rounded-[1.5rem] px-5 py-4">
+                    <p className="text-[15px] font-bold tracking-tight">{error.title}</p>
+                    <p className="mt-2 text-[14px] leading-relaxed opacity-90">{error.detail}</p>
+                    {error.tip && <p className="mt-3 text-[13.5px] leading-relaxed opacity-80">{error.tip}</p>}
+                  </div>
+                )}
+
+                {!error && !loading && !hasResult && (
+                  <div className="workbench-note rounded-[1.5rem] px-5 py-5 text-[14px] text-[var(--text-muted)]">
+                    <p className="font-bold text-[var(--foreground)] tracking-tight">Ready when you are</p>
+                    <p className="mt-2 leading-relaxed">
+                      Paste one supported paper URL and generate an editable citation draft.
+                    </p>
+                    <p className="mt-3 leading-relaxed text-[13px] text-[var(--text-soft)]">
+                      Best results come from direct DOI, arXiv, IEEE, or Springer article pages.
+                    </p>
+                  </div>
+                )}
+
+                {!error && loading && (
+                  <div className="workbench-note rounded-[1.5rem] border-l-4 border-l-[var(--accent)] px-5 py-5 text-[14px]">
+                    <p className="font-bold text-[var(--foreground)] tracking-tight">Extracting Metadata...</p>
+                    <p className="mt-2 leading-relaxed text-[var(--text-muted)]">
+                      Reading the paper metadata and securely formatting an ASME citation draft.
+                    </p>
+                  </div>
+                )}
+
+                {citation && !loading && (
+                  <div className="citation-sheet rounded-[1.6rem] p-5 sm:p-6 relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[var(--accent)] to-[var(--accent-soft)]" />
+                    <div className="flex items-start justify-between gap-4 mt-1">
+                      <div>
+                        <p className="eyebrow text-[11px]">Citation ready</p>
+                        <p className="mt-2 text-[14px] leading-relaxed text-[var(--text-muted)]">
+                          Review the draft, adjust anything you need, then copy the final
+                          version into your references.
+                        </p>
+                      </div>
+                      {sourceType && (
+                        <span className="result-chip rounded-full px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] whitespace-nowrap">
+                          {sourceType}
+                        </span>
+                      )}
+                    </div>
+
+                    <div className="mt-5 rounded-[1.25rem] bg-[rgba(244,247,245,0.6)] p-1">
+                      <textarea
+                        value={citation}
+                        onChange={(e) => setCitation(e.target.value)}
+                        className="paper-textarea min-h-[160px] w-full resize-none rounded-[1rem] px-5 py-4 font-mono text-[13.5px] leading-[1.8]"
+                      />
+                    </div>
+
+                    <div className="mt-5 flex justify-end">
+                      <button
+                        onClick={handleCopy}
+                        className="subtle-action rounded-full px-5 py-2.5 text-[13px] font-bold tracking-wide text-[var(--foreground)]"
+                      >
+                        {copied ? (
+                          <span className="flex items-center gap-1.5 text-[var(--accent)]">
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                            Copied!
+                          </span>
+                        ) : "Copy citation"}
+                      </button>
+                    </div>
+                  </div>
+                )}
               </div>
-            )}
-          </div>
+            </div>
+          </aside>
         </section>
       </div>
     </main>
