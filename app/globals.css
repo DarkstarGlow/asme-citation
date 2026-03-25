@@ -78,8 +78,8 @@ body::before {
 .mist-orb {
   position: absolute;
   border-radius: 9999px;
-  filter: blur(40px);
-  opacity: 0.6;
+  filter: blur(56px);
+  opacity: 0.38;
   pointer-events: none;
   animation: pulse-slow 8s ease-in-out infinite alternate;
 }
@@ -108,10 +108,9 @@ body::before {
 }
 
 .hero-shell {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.54), rgba(255, 255, 255, 0.18));
-  border: 1px solid rgba(43, 89, 63, 0.08);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.42));
+  border: 1px solid rgba(43, 89, 63, 0.1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.82);
 }
 
 .support-band {

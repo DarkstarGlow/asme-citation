@@ -71,17 +71,17 @@ export default function Home() {
         <div className="mist-orb mist-orb-3 bottom-0 left-1/3 h-72 w-72" />
       </div>
 
-      <div className="mx-auto flex w-full max-w-[96rem] items-start justify-center py-6 sm:py-10 md:py-12 lg:py-14 xl:py-16 2xl:py-20">
-        <section className="animate-slide-up grid w-full items-start gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(22rem,36rem)] lg:gap-12 xl:grid-cols-[minmax(0,1.08fr)_minmax(26rem,38rem)] xl:gap-16 2xl:grid-cols-[minmax(0,1.16fr)_minmax(28rem,40rem)]">
-          <div className="flex min-w-0 flex-col gap-10 xl:gap-12">
-            <header className="hero-shell space-y-8 rounded-[2.5rem] px-6 py-7 sm:px-8 sm:py-9 xl:px-10 xl:py-10">
-              <div className="space-y-5">
+      <div className="mx-auto w-full max-w-[82rem] py-6 sm:py-10 md:py-12 lg:py-14 xl:py-16">
+        <section className="animate-slide-up grid w-full items-start gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-10 xl:gap-12">
+          <div className="flex min-w-0 flex-col gap-8 xl:gap-10">
+            <header className="hero-shell space-y-7 rounded-[2.25rem] px-6 py-7 sm:px-8 sm:py-8 xl:px-9 xl:py-9">
+              <div className="space-y-4">
                 <p className="eyebrow text-xs">Quiet citation workspace</p>
-                <h1 className="editorial-title max-w-[12ch] text-[clamp(3rem,5.2vw,6.2rem)] font-medium leading-[0.94]">
+                <h1 className="editorial-title max-w-[11ch] text-[clamp(2.6rem,4.6vw,5rem)] font-medium leading-[0.96]">
                   Free ASME Citation Generator
                 </h1>
               </div>
-              <p className="max-w-[34rem] text-[16px] leading-[1.72] text-[var(--text-muted)] sm:text-[17px] xl:max-w-[38rem]">
+              <p className="max-w-[30rem] text-[15px] leading-[1.7] text-[var(--text-muted)] sm:text-[16px]">
                 Turn a verified paper link into an editable ASME citation without
                 staring at a harsh tool interface. Built for DOI, arXiv, IEEE, and
                 Springer paper pages.
@@ -119,8 +119,8 @@ export default function Home() {
             </div>
           </div>
 
-          <aside className="lg:sticky lg:top-8 xl:top-10">
-            <div className="workbench-panel rounded-[2.1rem] p-6 sm:p-8 xl:p-9">
+          <aside className="min-w-0 lg:sticky lg:top-8 xl:top-10">
+            <div className="workbench-panel w-full rounded-[2rem] p-6 sm:p-7 xl:p-8">
               <div className="space-y-7">
                 <div className="space-y-3">
                   <p className="eyebrow text-[11px]">Input</p>
