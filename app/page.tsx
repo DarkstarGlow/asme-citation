@@ -64,15 +64,15 @@ export default function Home() {
   };
 
   return (
-    <main className="desk-shell min-h-screen px-4 py-8 text-[var(--foreground)] sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
+    <main className="desk-shell min-h-screen px-4 py-8 text-[var(--foreground)] sm:px-6 lg:px-8 xl:px-10">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="mist-orb mist-orb-1 left-0 top-12 h-64 w-64 -translate-x-1/4" />
         <div className="mist-orb mist-orb-2 right-0 top-1/4 h-80 w-80 translate-x-1/4" />
         <div className="mist-orb mist-orb-3 bottom-0 left-1/3 h-72 w-72" />
       </div>
 
-      <div className="mx-auto w-full max-w-[82rem] py-6 sm:py-10 md:py-12 lg:py-14 xl:py-16">
-        <section className="animate-slide-up grid w-full items-start gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-10 xl:gap-12">
+      <div className="mx-auto w-full max-w-[88rem] py-6 sm:py-10 md:py-12 lg:py-14 xl:py-16">
+        <section className="animate-slide-up grid w-full items-start gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-10 xl:gap-12 2xl:gap-14">
           <div className="flex min-w-0 flex-col gap-8 xl:gap-10">
             <header className="hero-shell space-y-7 rounded-[2.25rem] px-6 py-7 sm:px-8 sm:py-8 xl:px-9 xl:py-9">
               <div className="space-y-4">
