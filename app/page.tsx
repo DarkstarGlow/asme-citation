@@ -101,15 +101,6 @@ export default function Home() {
                     <span className="font-semibold text-[var(--foreground)]">Springer</span>.
                   </p>
                 </div>
-                <div className="result-chip rounded-full px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em]">
-                  Verified
-                </div>
-              </div>
-              <div className="source-strip flex flex-wrap gap-2.5">
-                <span className="source-pill">DOI</span>
-                <span className="source-pill">arXiv</span>
-                <span className="source-pill">IEEE</span>
-                <span className="source-pill">Springer</span>
               </div>
               <p className="max-w-[46rem] border-t border-[var(--line-soft)] pt-4 text-[13px] leading-relaxed text-[var(--text-soft)]">
                 Avoid search results, author profile pages, publisher homepages, or

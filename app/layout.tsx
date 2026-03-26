@@ -30,6 +30,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${uiSans.variable} ${geistMono.variable} ${editorialSerif.variable} h-full w-full antialiased`}
     >
       <body className="min-h-full w-full">{children}</body>
