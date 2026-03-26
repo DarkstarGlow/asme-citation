@@ -48,6 +48,12 @@ npm run lint
 npm run build
 ```
 
+Cloudflare Pages build command:
+
+```bash
+pnpm exec next-on-pages
+```
+
 ## Project shape
 
 - `app/page.tsx`
@@ -66,11 +72,26 @@ npm run build
 - V1 is intentionally narrow.
 - Accuracy matters more than pretending every paper URL can be parsed.
 - The user can always manually edit the generated citation before copying.
+- This project is not a pure static Pages site. `/api/citation` is deployed as a Cloudflare Pages Function / Worker route.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy on Cloudflare Pages
 
-## Deploy on Vercel
+This project is deployed with Cloudflare Pages plus `@cloudflare/next-on-pages`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Required Pages settings:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Build command: `pnpm exec next-on-pages`
+- Build output directory: `.vercel/output/static`
+
+Required project config:
+
+- [`wrangler.toml`](C:\Users\mlpcm\Desktop\AIcoding_and_tool\web-making\asme-citation\wrangler.toml)
+  - `pages_build_output_dir = ".vercel/output/static"`
+  - `compatibility_flags = ["nodejs_compat"]`
+
+Why `nodejs_compat` is needed:
+
+- the app uses a dynamic API route at `app/api/citation/route.ts`
+- Cloudflare Pages runs that route as a Worker / Function
+- the runtime dependency chain pulls in Node built-ins such as `node:buffer` and `node:async_hooks`
+- without `nodejs_compat`, deploys may succeed but the API can fail at runtime
