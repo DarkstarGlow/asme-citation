@@ -267,7 +267,7 @@ export default function Home() {
                 <div className="space-y-2">
                   <p className="text-sm font-bold text-[var(--foreground)]">2. Generate</p>
                   <p className="text-[14px] leading-relaxed text-[var(--text-muted)]">
-                    Click the "Generate ASME Citation" button to process your request.
+                    Click the &quot;Generate ASME Citation&quot; button to process your request.
                   </p>
                 </div>
                 <div className="space-y-2">
