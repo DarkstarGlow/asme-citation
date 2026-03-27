@@ -234,7 +234,98 @@ export default function Home() {
             </div>
           </aside>
         </section>
+        
+        {/* SEO Content Section - Integrated Style */}
+        <section className="mt-24 w-full border-t border-[var(--line-soft)] pt-16">
+          <div className="mx-auto max-w-4xl space-y-16 px-4 pb-20">
+            
+            {/* Why it matters */}
+            <div className="space-y-4">
+              <p className="eyebrow text-xs uppercase tracking-[0.2em]">Background</p>
+              <h2 className="text-2xl font-bold tracking-tight text-[var(--foreground)]">
+                Why Accurate ASME Citation Matters
+              </h2>
+              <p className="max-w-[65ch] text-[15px] leading-relaxed text-[var(--text-muted)]">
+                The American Society of Mechanical Engineers (ASME) uses a specific numerical sequence system for references. 
+                Whether you are writing a journal paper or a technical report, using an automated ASME reference generator 
+                ensures that your bibliography meets professional engineering standards, saving you hours of manual formatting.
+              </p>
+            </div>
+
+            {/* How to use */}
+            <div className="space-y-6">
+              <h2 className="text-xl font-bold tracking-tight text-[var(--foreground)]">
+                How to Use the ASME Citation Generator
+              </h2>
+              <div className="grid gap-6 sm:grid-cols-3">
+                <div className="space-y-2">
+                  <p className="text-sm font-bold text-[var(--foreground)]">1. Enter Source</p>
+                  <p className="text-[14px] leading-relaxed text-[var(--text-muted)]">
+                    Paste the URL or DOI of your reference into the input field above.
+                  </p>
+                </div>
+                <div className="space-y-2">
+                  <p className="text-sm font-bold text-[var(--foreground)]">2. Generate</p>
+                  <p className="text-[14px] leading-relaxed text-[var(--text-muted)]">
+                    Click the "Generate ASME Citation" button to process your request.
+                  </p>
+                </div>
+                <div className="space-y-2">
+                  <p className="text-sm font-bold text-[var(--foreground)]">3. Edit & Copy</p>
+                  <p className="text-[14px] leading-relaxed text-[var(--text-muted)]">
+                    Review the formatted result, make manual tweaks, and copy it directly.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* FAQ */}
+            <div className="space-y-8 border-t border-[var(--line-soft)] pt-12">
+              <h2 className="text-xl font-bold tracking-tight text-[var(--foreground)]">
+                Frequently Asked Questions
+              </h2>
+              <div className="grid gap-8 sm:grid-cols-2">
+                <div className="space-y-3">
+                  <p className="text-[15px] font-bold text-[var(--foreground)]">
+                    Is this updated for the latest ASME standards?
+                  </p>
+                  <p className="text-[14px] leading-relaxed text-[var(--text-muted)]">
+                    Yes, our tool is consistently updated to align with the current ASME citation guidelines for engineering publications.
+                  </p>
+                </div>
+                <div className="space-y-3">
+                  <p className="text-[15px] font-bold text-[var(--foreground)]">
+                    Can I format citations for online journals?
+                  </p>
+                  <p className="text-[14px] leading-relaxed text-[var(--text-muted)]">
+                    Absolutely. Simply provide the URL or DOI, and the tool will extract the metadata required for a standard ASME format.
+                  </p>
+                </div>
+                <div className="space-y-3">
+                  <p className="text-[15px] font-bold text-[var(--foreground)]">
+                    Do I need to register to use the tool?
+                  </p>
+                  <p className="text-[14px] leading-relaxed text-[var(--text-muted)]">
+                    No, this is a 100% free tool with no login required, specifically designed for students and researchers.
+                  </p>
+                </div>
+                <div className="space-y-3">
+                  <p className="text-[15px] font-bold text-[var(--foreground)]">
+                    Can I manually edit the results?
+                  </p>
+                  <p className="text-[14px] leading-relaxed text-[var(--text-muted)]">
+                    Yes. We provide an editable text area so you can fine-tune every detail before copying the citation to your paper.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
       </div>
     </main>
   );
 }
+
+
+
